@@ -29,7 +29,7 @@ function createDieObject(x,y,height,width, dotRad){
 
 function dieThrow(){
     for(let i=0; i<Dice.length; i++){
-    let result = randomInt(6);;
+    let result = randomInt(6);
     dieFaceDraw(result, i);
     }
 }
