@@ -10,8 +10,8 @@ function draw1(die){
 }
 
 function draw2(die){
-    let dotX = Dice[die].x + 3*Dice[die].dotRad;
-    let dotY = Dice[die].y + 3*Dice[die].dotRad;
+    let dotX = Dice[die].x + 5*Dice[die].dotRad;
+    let dotY = Dice[die].y + 5*Dice[die].dotRad;
     ctx.beginPath();
     fullCircle(dotX,dotY,Dice[die].dotRad); 
     dotX = Dice[die].x+Dice[die].width-3*Dice[die].dotRad;
