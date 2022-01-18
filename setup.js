@@ -13,7 +13,7 @@ function createDie(x, y, height, width, dotSize){
   dice.push(die);
 }
 
-createDie(50,50,50,50,50);
-alert (dice[0].x);
+createDie(50,50,100,100,50);
+
 
 
