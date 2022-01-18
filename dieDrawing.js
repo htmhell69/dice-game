@@ -22,8 +22,6 @@ function draw2(die){
 }
 
 
-setInterval(dieThrow, 1000);
-
 
 
 
