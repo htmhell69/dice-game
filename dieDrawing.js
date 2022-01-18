@@ -14,8 +14,8 @@ function draw2(die){
     let dotY = Dice[die].y + 5*Dice[die].dotRad;
     ctx.beginPath();
     fullCircle(dotX,dotY,Dice[die].dotRad); 
-    dotX = Dice[die].x+Dice[die].width-3*Dice[die].dotRad;
-    dotY = Dice[die].y+Dice[die].height-3*Dice[die].dotRad;
+    dotX = Dice[die].x+Dice[die].width-5*Dice[die].dotRad;
+    dotY = Dice[die].y+Dice[die].height-5*Dice[die].dotRad;
     fullCircle(dotX,dotY,Dice[die].dotRad); 
     ctx.closePath();
     ctx.fill();
