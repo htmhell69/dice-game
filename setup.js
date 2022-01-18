@@ -13,9 +13,14 @@ function createDie(x, y, height, width, dotSize){
     width: width,
     dotSize: dotSize
   }
+  
   dice.push(die);
-}
+} 
 
+function rollDie(){
+  var ch = 1+Math.➥floor(Math.random()*6);
+  
+}
 createDie(50,50,100,100,50);
 
 
