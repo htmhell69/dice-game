@@ -1,9 +1,8 @@
 //setting basic variables
-var ctx = document.getElementById("canvas").getContext('2d');
 var canvasWidth = 400;
 var canvasHeight = 300;
-var dice = [];
-
+var Dice = [];
+var ch;
 //creating functions
 function createDie(x, y, height, width, dotSize){
   let die = {
@@ -14,14 +13,21 @@ function createDie(x, y, height, width, dotSize){
     dotSize: dotSize
   }
   
-  dice.push(die);
+  Dice.push(die);
 } 
 
 function rollDie(){
-  var ch = 1+Math.➥floor(Math.random()*6);
-  
+  for(let i=0; i<Dice.length; i++){
+    ch = 1+Math.floor(Math.random()*6);
+    drawDots(ch, Dice[i]);
+  }
+}
+
+function drawDots(num, die){
+  var ctx = document.getElementById("canvas").getContext('2d');
+  alert(die.x);
 }
 createDie(50,50,100,100,50);
-
+rollDie();
 
 
