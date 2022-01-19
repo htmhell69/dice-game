@@ -28,10 +28,12 @@ function drawDots(num, die){
     ctx.lineWidth = 5;
     ctx.clearRect(die.x,die.y,die.width,die.height);
     ctx.strokeRect(die.x,die.y,die.width,die.height);
+    ctx.fillStyle = "#009966";
 }
 
 
 createDie(50,50,100,100,50);
 rollDie();
+  
 
 
