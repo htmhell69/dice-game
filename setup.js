@@ -25,39 +25,33 @@ function rollDie(){
 
 function drawDots(num, die){
   var ctx = document.getElementById("canvas").getContext('2d');
-  alert("dierolled");
   ctx.lineWidth = 5;
   ctx.clearRect(die.x,die.y,die.width,die.height);
   ctx.strokeRect(die.x,die.y,die.width,die.height);
   ctx.fillStyle = "#009966";
-  switch(num){
-    case 1:
+  switch(num) {
+  case 1:
     draw1(die);
     break;
-    
-    case 2:
+  case 2:
     draw2(die);
     break;
-    
-    case 3:
-    draw2(die);
-    draw1(die);
-    break;
-    
-    case 4:
+  case 3:
+   draw2(die);
+   draw1(die);
+   break;
+  case 4:
     draw4(die);
     break;
-      
-    case 5:
+  case 5:
     draw4(die);
     draw1(die);
+    break; 
+  default:
+    draw4();
+    draw2mid();
     break;
-    
-    case 6:
-    draw4(die);
-    draw2mid(die);
-    break;    
-  }
+}
   
 }
 
