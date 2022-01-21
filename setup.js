@@ -62,7 +62,7 @@ function drawDots(num, die){
 }
 
 
-createDie(50,50,100,100,10);
+createDie(50,50,100,100,5);
   
 
 
