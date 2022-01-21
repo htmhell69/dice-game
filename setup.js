@@ -57,7 +57,6 @@ function drawDots(num, die){
 
 
 createDie(50,50,100,100,50);
-rollDie();
   
 
 
