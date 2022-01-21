@@ -20,12 +20,12 @@ function rollDie(){
   for(let i=0; i<Dice.length; i++){
     ch = 1+Math.floor(Math.random()*6);
     drawDots(ch, Dice[i]);
-    alert("dierolled");
   }
 }
 
 function drawDots(num, die){
   var ctx = document.getElementById("canvas").getContext('2d');
+  alert("dierolled");
   ctx.lineWidth = 5;
   ctx.clearRect(die.x,die.y,die.width,die.height);
   ctx.strokeRect(die.x,die.y,die.width,die.height);
