@@ -18,7 +18,7 @@ function createDie(x, y, height, width, dotSize){
 
 function rollDie(){
   for(let i=0; i<Dice.length; i++){
-    ch = 1+Math.floor(Math.random()*6);
+    ch = 1;
     drawDots(ch, Dice[i]);
   }
 }
