@@ -32,30 +32,30 @@ function drawDots(num, die){
   ctx.fillStyle = "#009966";
   switch(num){
     case 1:
-    draw1();
+    draw1(die);
     break;
     
     case 2:
-    draw2();
+    draw2(die);
     break;
     
     case 3:
-    draw2();
-    draw1();
+    draw2(die);
+    draw1(die);
     break;
     
     case 4:
-    draw4();
+    draw4(die);
     break;
       
     case 5:
-    draw4();
-    draw1();
+    draw4(die);
+    draw1(die);
     break;
     
     case 6:
-    draw4();
-    draw2mid();
+    draw4(die);
+    draw2mid(die);
     break;    
   }
   
