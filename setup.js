@@ -2,6 +2,8 @@
 var canvasWidth = 400;
 var canvasHeight = 300;
 var Dice = [];
+var numDice = 1;
+var dieSpace = 100;
 //this variable holds the result of the die roll
 var ch;
 //canvas
@@ -26,6 +28,14 @@ function rollDie(){
   for(let i=0; i<Dice.length; i++){
     ch = Math.floor( 1 + (Math.random() * 5));
     drawDots(ch, Dice[i]);
+  }
+}
+
+function addDie(){
+  if(numDice <5){
+    createDie(50 + (numDice * dieSpace) - 100,50,100,100,10);
+  } else{
+    alert("you have the max amount of dice");
   }
 }
 
@@ -63,8 +73,7 @@ function drawDots(num, die){
 
 
 createDie(50,50,100,100,10);
-createDie(150,50,100,100,10);
-createDie(250,50,100,100,10);
+
 
   
 
