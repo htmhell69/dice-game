@@ -24,7 +24,7 @@ function createDie(x, y, height, width, dotSize){
 //this function gets a random number 1-6 then calls the draw function. It does this for each die object in the Dice array
 function rollDie(){
   for(let i=0; i<Dice.length; i++){
-    ch = Math.random();
+    ch = Math.floor( 1 + (Math.random() * 5));
     drawDots(ch, Dice[i]);
   }
 }
@@ -63,6 +63,9 @@ function drawDots(num, die){
 
 
 createDie(50,50,100,100,10);
+createDie(150,50,100,100,10);
+createDie(250,50,100,100,10);
+
   
 
 
