@@ -32,7 +32,8 @@ function rollDie(){
 }
 
 function addDie(){
-  if(numDice <5){
+  alert("added");
+  if(numDice < 5){
     createDie(50 + (numDice * dieSpace) - 100,50,100,100,10);
   } else{
     alert("you have the max amount of dice");
