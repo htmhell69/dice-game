@@ -28,13 +28,13 @@ function rollDie(){
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
   let scoreToAdd = 0;
   for(let i=0; i<Dice.length; i++){
-    ch = Math.floor( 1 + (Math.random() * 5));
+    ch = Math.floor( 1 + (Math.random() * 6));
     gameOver = ch == loosingNum;
     scoreToAdd += ch;
     drawDots(ch, Dice[i]);
   }
   if(!gameOver){
-  loosingNum = Math.floor( 1 + (Math.random() * 5));
+  loosingNum = Math.floor( 1 + (Math.random() * 6));
   document.getElementById("avoid").innerHTML = loosingNum;
   points += scoreToAdd;
   document.getElementById("points").innerHTML = points;
@@ -90,8 +90,8 @@ function drawDots(num, die){
     draw1(die);
     break; 
   default:
-    draw4();
-    draw2mid();
+    draw4(die);
+    draw2mid(die);
     break;
 }
   

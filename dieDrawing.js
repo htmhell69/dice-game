@@ -48,6 +48,18 @@ function draw4(die){
   ctx.fill();
 }
 
+function draw2mid(die){
+  ctx.beginPath();
+  let dotX = die.x + (3 * die.dotSize);
+  let dotY= die.y + (0.5 * die.height);
+  ctx.arc(dotX,dotY,die.dotSize,0,Math.PI*2);
+  dotX = die.x + die.width - (3 * die.dotSize);
+  dotY = die.y + (0.5 * die.height);
+  ctx.arc(dotX,dotY,die.dotSize,0,Math.PI*2);
+  ctx.closePath();
+  ctx.fill();
+}
+
 
 
 
