@@ -1,6 +1,6 @@
 <html>
         <head>
-                <canvas id="canvas" width="500" height="300"></canvas>
+                <canvas id="canvas" width="1000" height="300"></canvas>
                 <style src="styles.css"></style>
                 <script src="setup.js"></script>
                 <script src="dieDrawing.js"></script>
@@ -8,11 +8,34 @@
         </head>
         
         <body>
-            <form name="f">
-                Points: <input name="pv" value="   "/>
-                Die: <input id = "roll" type = "button" value = "roll dice" onclick = "rollDie();" />
-            </form>
-                <input id = "add" type = "button" value = "add a die" onclick = "addDie();" />
-                <input id = "remove" type = "button" value = "remove a die" onclick = "rollDie();" />
+             <br>
+             Points:
+             <span id="points"> 0 </span>        
+             <br>   
+             Number To Aviod:
+             <span id="avoid">1</span>  
+             <br>
+             Number Of Dice:
+             <span id="numDice"> 1 </span>  
+             <br> 
+             <button onclick="rollDie();">roll die</button>
+             <br>
+             <button onclick="addDie();">add die</button>
+             <br>
+             <button onclick="removeDie();">remove die</button>
+             
+             <script>document.getElementById("avoid").innerHTML = loosingNum;</script>
+                
+            
+                
+
         </body>
 </html>
+
+
+
+
+
+
+
+

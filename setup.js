@@ -1,15 +1,15 @@
 //setting basic variables
-var canvasWidth = 400;
+var canvasWidth = 1000;
 var canvasHeight = 300;
 var Dice = [];
 var numDice = 1;
-var dieSpace = 100;
-//this variable holds the result of the die roll
+var dieSpace = 125;
+var points = 0;
+var loosingNum = Math.floor( 1 + (Math.random() * 5)); //this variable holds the result of the die roll
 var ch;
-//canvas
-var ctx = document.getElementById("canvas").getContext('2d');
+var gameOver = false;
+var ctx = document.getElementById("canvas").getContext('2d'); //canvas
 //creating functions
-
 //this function creates a die object and puts it in the Dice array
 function createDie(x, y, height, width, dotSize){
   let die = {
@@ -25,18 +25,43 @@ function createDie(x, y, height, width, dotSize){
 
 //this function gets a random number 1-6 then calls the draw function. It does this for each die object in the Dice array
 function rollDie(){
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  let scoreToAdd = 0;
   for(let i=0; i<Dice.length; i++){
     ch = Math.floor( 1 + (Math.random() * 5));
+    gameOver = ch == loosingNum;
+    scoreToAdd += ch;
     drawDots(ch, Dice[i]);
   }
+  if(!gameOver){
+  loosingNum = Math.floor( 1 + (Math.random() * 5));
+  document.getElementById("avoid").innerHTML = loosingNum;
+  points += scoreToAdd;
+  document.getElementById("points").innerHTML = points;
+  } else{
+    alert("your score is " + points);
+    location.reload();
+  }
+
 }
 
 function addDie(){
-  alert("added");
   if(numDice < 5){
-    createDie(50 + (numDice * dieSpace) - 100,50,100,100,10);
+    numDice +=1;
+    document.getElementById("numDice").innerHTML = numDice;
+    createDie(50 + (numDice * dieSpace) - dieSpace,50,100,100,10);
   } else{
     alert("you have the max amount of dice");
+  }
+}
+
+function removeDie(){
+  if(numDice > 1){
+    Dice.pop();
+    numDice -=1;
+    document.getElementById("numDice").innerHTML = numDice;
+  } else{
+    alert("you have the minimum amount of dice");
   }
 }
 
